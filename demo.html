@@ -8,9 +8,12 @@
 
 <body>
 
-    <copy-able></copy-able>
+    <copy-able id="MyElement">
+        <input type="text" value="my-text" />
+    </copy-able>
     <script type="module">
         import './dist/copy-able.js';
+        document.getElementById("MyElement").addEventListener("copied", evt => console.log(evt))
     </script>
 
 </body>
